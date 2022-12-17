@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import styled from "styled-components";
+import Navbar from "./components/Navbar";
+import HomePage from "./pages/HomePage";
+import CartPage from "./pages/CartPage";
+import { Routes, Route } from "react-router-dom";
+
+const Container = styled.div``;
+
+const Wrapper = styled.div``;
+
+const NavbarContainer = styled.div`
+    position: sticky;
+    height: 6vh;
+`;
+
+const ContentContainer = styled.div`
+    height: 94vh;
+    /* background-color: #999; */
+    overflow-y: scroll;
+`;
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Container>
+            <Wrapper>
+                <NavbarContainer>
+                    <Navbar />
+                </NavbarContainer>
+                <ContentContainer>
+                    <Routes>
+                        <Route path="/">
+                            <Route index element={<HomePage />} />
+                            <Route path="cart" element={<CartPage />} />
+                        </Route>
+                    </Routes>
+                </ContentContainer>
+            </Wrapper>
+        </Container>
+    );
 }
 
 export default App;
