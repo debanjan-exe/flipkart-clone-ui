@@ -1,20 +1,26 @@
 ::-webkit-scrollbar {
-    width: 10px;
-    background: transparent;
+  width: 10px;
+  background: transparent;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: rgb(170, 170, 170);
-    border-radius: 10px;
+  background: rgb(170, 170, 170);
+  border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: rgb(111, 111, 111);
+  background: rgb(111, 111, 111);
+}
+
+.thumbs-wrapper,
+.carousel-status,
+.control-dots {
+  display: none;
 }

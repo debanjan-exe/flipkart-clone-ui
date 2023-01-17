@@ -1,9 +1,9 @@
 import "./App.css";
 import styled from "styled-components";
 import Navbar from "./components/Navbar";
-import HomePage from "./pages/HomePage";
-import CartPage from "./pages/CartPage";
+import CartPage from "./pages/Cartpage";
 import { Routes, Route } from "react-router-dom";
+import { Homepage } from "./pages";
 
 const Container = styled.div``;
 
@@ -30,7 +30,7 @@ function App() {
                 <ContentContainer>
                     <Routes>
                         <Route path="/">
-                            <Route index element={<HomePage />} />
+                            <Route index element={<Homepage />} />
                             <Route path="cart" element={<CartPage />} />
                         </Route>
                     </Routes>

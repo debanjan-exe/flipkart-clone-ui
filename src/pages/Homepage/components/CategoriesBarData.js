@@ -9,7 +9,7 @@ import {
     img8,
     img9,
     img10,
-} from "../assets/images/categories_images";
+} from "../../../assets/images/categories_images";
 
 export const CategoriesBarData = [
     {
